@@ -1,0 +1,25 @@
+html{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body{
+    display: inline-block;/*Todo en una caja centrada*/
+    text-align: left;/*Todo lo que este en la caja alineado a la izquierda*/
+}
+
+label, legend{
+    font-weight: bold;
+}
+
+*:required, .obligatorio{
+    border: thin solid blue;/*Borde de las cajas de texto*/
+}
+
+input[type=number], .numero {
+    text-align: right;
+}
+
+br + footer, footer, form em{
+    font-size: small;
+}
