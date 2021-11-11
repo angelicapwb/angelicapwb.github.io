@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo de Programa</title>
+  </head>
+  <body>
+    <main>
+      <h1>Ejemplo de Programa</h1>
+      <form action="javascript:procesa();">
+        <p>
+          <input id="inpNombre" type="text" placeholder="Nombre" required>
+          <output id="saludo"></output>
+        </p>
+        <p>
+          <input id="inpCalificación" type="number" placeholder="Calificación"
+            min="0" max="10" required>
+          <output id="comentario"></output>
+        </p>
+        <p>
+          <label>
+            Cuenta Hasta:
+            <br>
+            1<input id="inpHasta" type="range" min="1" max="5">5
+          </label>
+          <output id="cuenta"></output>
+        </p>
+        <p><button id="submit">Procesa</button></p>
+        <footer>Copyright &copy; 2020 Juan Daniel Granados Romo</footer>
+      </form>
+      <script>
+        function procesa() {
+          const nombre = inpNombre.value;
+          saludo.value = `Hola ${nombre}.`;
+          const calificación = inpCalificación.valueAsNumber;
+          if (calificación >= 8) {
+            comentario.value = "Aprobaste";
+          } else {
+            comentario.value = "Reprobaste";
+          }
+          const hasta = inpHasta.valueAsNumber;
+          let i = 1;
+          cuenta.value = "";
+          while (i <= hasta) {
+            cuenta.value += i;
+            i++;
+          }
+        }
+      </script>
+    </main>
+  </body>
+</html>
