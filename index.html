@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <script src="JavaScript/libs/bignumber.js/bignumber.min.js"></script>
+    <script src="JavaScript/libs/numeral.js/numeral.min.js"></script>
+    <title>Segunda Evaluación</title>
+</head>
+<body>
+    <header>
+        <h1>Proveedores</h1>
+    </header>
+    <form id="forma" action="javascript:procesa()">
+    <p><em>El borde azul indica obligatorio.</em></p>
+
+    <p>
+        <label accesskey="C">
+            Clave
+            <input name="clave"
+                   type="text"
+                   autofocus
+                   required
+                   maxlength="10" 
+                   size="20" 
+                   pattern="{1,10}"
+                   placeholder="1 a 10 digitos" 
+            >
+        </label>
+    </p>
+
+    <p>
+        <label accesskey="N">
+            Nombre
+            <input name="nombre"
+                   type="text"
+                   required
+                   maxlength="50" 
+                   size="20" 
+                   pattern="{1,50}"
+                   placeholder="1 a 50 caracteres" 
+            >
+        </label>
+    </p>
+
+    <p>
+        <label accesskey="T">
+            Teléfono
+            <input name="telefono"
+                   type="text"
+                   required
+                   maxlength="14" 
+                   size="20" 
+                   pattern="{8,14}"
+                   placeholder="8 a 14 digitos" 
+            >
+        </label>
+    </p>
+
+    <p>
+        <label accesskey="F">
+            Fecha
+            <input name="fecha"
+                   type="date"
+                   required
+                   max="2022-01-24"
+                   min="2021-01-24" 
+            >
+        </label>
+    </p>
+
+    <fieldset>
+        <legend>Menú De Comida</legend>
+    <div>
+      <label>
+        <input id="70.0" type="checkbox" accesskey="H" name="comida"
+               value="Hawaiana">
+           Hawaiana $70.00
+      </label>
+      <label>
+        <br><br><input id="110.0" type="checkbox" accesskey="Q" name="comida"
+               value="Queso">
+           Queso $110.00
+      </label>
+      <label>
+        <br><br><input id="105.0" type="checkbox" accesskey="M" name="comida"
+               value="Milanesa">
+           Milanesa 105.00
+      </label>
+      <label>
+        <br><br><input id="75.0" type="checkbox" accesskey="z" name="comida"
+               value="Jamón">
+           Jamón $75.00
+      </label>
+      <label>
+        <br><br><input id="80.0" type="checkbox" accesskey="X" name="comida"
+               value="Alemana">
+           Alemana $80.00
+      </label>
+      <label>
+        <br><br><input id="120.0" type="checkbox" accesskey="Y" name="comida"
+               value="Española">
+           Española $120.00
+      </label>
+
+    </div>
+    <br>
+    Seleccionaste: <output id="salidaPedido"></output><br>
+    <br> Total: <output id="salidaTotal"></output>
+        </fieldset>
+
+        <input type="submit" value="En Pantalla" accesskey="M">
+        <input type="button" onclick="Alerta()" value="Alerta">
+
+        <br><output id="salidaClave"></output>
+        <br><output id="salidaNombre"></output>
+        <br><output id="salidaTelefono"></output>
+        <br><output id="salidaFecha"></output>
+
+    </form>
+
+
+    <script src="JavaScript/procesa.js"></script>
+    
+</body>
+</html>
